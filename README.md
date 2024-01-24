@@ -16,5 +16,3 @@
   - If the changes effected the ui of any of the components, these changes can be seen, compared to the old version and approved: see here: https://www.chromatic.com/review?appId=65b12a2908ad634bdd02f982&number=1&type=linked
   - After the changes are approved, MR can be merged
 
-
-https://update_styles_for_card--65b12a2908ad634bdd02f982.chromatic.com
