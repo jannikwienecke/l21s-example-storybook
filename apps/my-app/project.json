@@ -71,6 +71,53 @@
       "options": {
         "jestConfig": "apps/my-app/jest.config.ts"
       }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/my-app/.storybook",
+        "browserTarget": "my-app:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/my-app",
+        "configDir": "apps/my-app/.storybook",
+        "browserTarget": "my-app:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c apps/my-app/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "my-app:build-storybook",
+        "staticFilePath": "dist/storybook/my-app"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "my-app:build-storybook:ci"
+        }
+      }
     }
   }
 }
