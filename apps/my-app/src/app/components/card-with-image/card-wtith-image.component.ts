@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
           class="aspect-[1.89] object-contain object-center w-full overflow-hidden self-stretch"
         />
         <div
-          class="text-orange-500 text-base font-medium self-stretch whitespace-nowrap mt-6"
+          class="text-orange-600 text-base font-medium self-stretch whitespace-nowrap mt-6"
         >
           Unfallmeldedienst
         </div>
@@ -47,7 +47,7 @@ import { CommonModule } from '@angular/common';
             />
           </svg>
 
-          <div class="text-orange-500 text-base leading-5">Mehr erfahren</div>
+          <div class="text-orange-600 text-base leading-5">Mehr erfahren</div>
         </div>
       </div>
     </div>
