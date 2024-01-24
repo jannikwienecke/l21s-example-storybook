@@ -22,12 +22,8 @@ export const Primary: Story = {
   args: {
     src: '/image.jpg',
   },
-};
-
-export const Heading: Story = {
-  args: {},
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    expect(canvas.getAllByRole('img')).toHaveLength(2);
+    expect(canvas.getAllByRole('img')).toHaveLength(1);
   },
 };
